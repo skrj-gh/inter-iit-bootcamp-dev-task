@@ -1,0 +1,152 @@
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item2 item3';
+  gap: 20px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-image: linear-gradient(to bottom, #222, transparent, #222);
+  text-align: center;
+  padding: 20px 0;
+  /* font-size: 30px; */
+  font-size: 1.5vw;
+}
+
+.grid-container div p{
+    font-size: 1.2vw;
+}
+
+.item1, .item2, .item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.item1 div, .item2 div, .item3 div{
+    width: 80%;
+    text-align: center;
+}
+
+.grid-container h3{
+    background: linear-gradient(45deg, #EA4646 0%, #FC9E06 45.31%, #DAF626 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    /* background-color: #000000; Set navbar background to black */
+    background-image: linear-gradient(to bottom, #000, transparent);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays above other elements */
+  }
+  
+  .navbar-logo img {
+    height: 50px; /* Adjust logo size as needed */
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    background: linear-gradient(45deg, #EA4646 0%, #FC9E06 45.31%, #DAF626 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Hero styles */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-image: url('../assets/hero.png'); /* Set background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    padding-top: 60px; /* To prevent content being hidden behind the fixed navbar */
+  }
+  
+  .hero-content {
+    text-align: center;
+    /* max-width: 600px; Limit the width for better readability */
+    width: 80vw;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background for better text visibility */
+    border-radius: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #EA4646 0%, #FC9E06 45.31%, #DAF626 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-login-button {
+    background-color: rgba(66, 133, 244, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .hero-login-button:hover {
+    background-color: #357AE8; /* Darker blue on hover */
+  }

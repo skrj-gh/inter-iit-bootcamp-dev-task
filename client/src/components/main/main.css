@@ -1,0 +1,318 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    /* margin-top: 20px; */
+    color: #585858;
+}
+
+.copy_btn {
+    display: inline-block;
+    padding: 10px 15px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    color: #ffffff; /* Text color */
+    background-color: #1e1e1e; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    text-align: center; /* Center the text */
+}
+
+.copy_btn:hover {
+    background-image: linear-gradient(45deg, #EA4646 0%, #FC9E06 100%);
+}
+
+.copy_btn:active {
+    background-color: #EA4646; /* Even darker background on active */
+}
+
+.copy_btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto 5vh;
+    overflow-x: hidden;
+}
+
+.mic{
+    /* width: 5px; */
+    height: 20px;
+    width: auto !important;
+    filter: invert(1);
+}
+
+.main .greet {
+    /* margin: 50px 0px; */
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: linear-gradient(45deg, #EA4646 0%, #FC9E06 45.31%, #DAF626 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #333333;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: #444444;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box img:hover {
+    /* filter: brightness(0.7) invert(1); */
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    color: #282828;
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.result {
+    padding: 0px 5%;
+    max-width: 70vw;
+    overflow-y: auto;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data {
+    display: flex;
+    /*flex-direction: column; /*Align items vertically*/
+    gap: 10px; /* Spacing between items */
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.chat_logo{
+    height: max-content;
+}
+
+.mic_controls{
+    display: flex;
+}
+
+.mic_wrapper{
+    height: max-content;
+}
+
+.result-data pre {
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 10px 0;
+    overflow-x: auto;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #fff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+.copy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #0056b3;
+}
+
+
+.light-circle {
+    position: absolute;
+    top: -250px;           /* Adjust the vertical position */
+    right: -250px;         /* Adjust the horizontal position */
+    width: 500px;          /* Set the width of the circle */
+    height: 500px;         /* Set the height of the circle */
+    border-radius: 500px;  /* Make the shape a large circle */
+    background: rgba(255, 255, 255, 0.70); /* Semi-transparent white */
+    filter: blur(300px);   /* Apply a large blur effect */
+    flex-shrink: 0;        /* Prevent the circle from shrinking */
+    z-index: 1;           /* Place behind other content */
+  }
+
+
+  .main .nav p,
+.main .greet p,
+.main .cards p,
+.result p,
+.bottom-info {
+    color: #ffffff; /* White text for better contrast */
+}
+
+.sidebar .recent-title,
+.sidebar .bottom-item p {
+    color: #ffffff; /* White text in sidebar */
+}
+  
+.search-box .icons img {
+  filter: invert(1); /* Invert the color of the icons */
+  transition: filter 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.search-box .icons img:hover {
+  filter: invert(0.5); /* Slightly adjust the color on hover */
+}
+
+
+
+/* Customize the background color for the code block */
+pre code {
+    background: #1e1e1e !important;
+    color: #dcdcdc !important;
+    padding: 1em;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+/* Customize the colors for specific code tokens */
+.hljs-comment {
+    color: #6a9955 !important;
+}
+.hljs-title {
+    color: #569cd6 !important;
+}
+.hljs-string {
+    color: #d69d85 !important;
+}
+.hljs-section{
+    color: #DCDCAA !important;
+}
+.hljs-variable{
+    color: #569CD6 !important;
+}
