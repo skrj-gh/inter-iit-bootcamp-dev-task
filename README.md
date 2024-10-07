@@ -2,8 +2,11 @@
 
 # Deployed Link: https://bit.ly/LazarusAi
 
+## Sorry, we created the folders from scratch so we were not able to make pull request
 
 ## Instructions to run on local
+
+
 
 ### Here all the queries sent by client is NOT served by local server but remotely deployed server. I have left the link for server, rather than putting it in .env for your convience.
 ### I haven't used localhost as we require .env in both client (for Firebase api keys) and server(for Gemini api key, MongoDB api key and Port on which server is running).
